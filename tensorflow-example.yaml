@@ -11,5 +11,3 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 4
-        memory: "100Gi"
-        cpu: "4000m"
