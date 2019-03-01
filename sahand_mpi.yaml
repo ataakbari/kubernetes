@@ -1,35 +1,17 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+apiVersion: v1
+kind: Pod
 metadata:
-  name: tiller-admin
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: admin
-subjects:
-- kind: ServiceAccount
-  name: tiller
----
-kind: Role
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: mpi-default
-rules:
-- apiGroups: ["apps"]
-  resources: ["statefulsets"]
-  verbs: ["get", "list", "watch"]
-- apiGroups: [""]
-  resources: ["pods", "configmaps"]
-  verbs: ["get", "list", "watch"]
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: mpi-default
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: mpi-default
-subjects:
-- kind: ServiceAccount
-  name: default
+  name: cpu-demo
+  namespace: pace-ucicl
+spec:
+  containers:
+  - name: cpu-demo-ctr
+    image: vish/stress
+    resources:
+      limits:
+        cpu: "1"
+      requests:
+        cpu: "0.5"
+    args:
+    - -cpus
+    - "2"
