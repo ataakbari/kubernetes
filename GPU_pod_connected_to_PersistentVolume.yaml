@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: gpu-container
-    image: https://raw.githubusercontent.com/ataakbari/kubernetes/master
+    image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:bc47da8c
     args: ["sleep", "infinity"]
     resources:
       limits:
@@ -24,4 +24,4 @@ spec:
         claimName: batman-vol
 
 
-# gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:latest
+# gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:bc47da8c
