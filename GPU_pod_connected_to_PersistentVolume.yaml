@@ -10,7 +10,7 @@ spec:
     args: ["sleep", "infinity"]
     resources:
       limits:
-        nvidia.com/gpu: 2
+        nvidia.com/gpu: 1
         memory: "20Gi"
       requests:
         memory: "20Gi"
