@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: cpu-demo-ctr
-    image: gitlab-registry.nautilus.optiputer.net/prp/nginx
+    image: nginx
     resources:
       limits:
         cpu: "1"
