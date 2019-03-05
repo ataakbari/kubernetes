@@ -6,7 +6,6 @@ metadata:
 spec:
   containers:
   - name: cpu-demo-ctr
-    image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:9108e5a2
     resources:
       limits:
         cpu: "1"
@@ -15,3 +14,4 @@ spec:
     args:
     - -cpus
     - "2"
+#     image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:9108e5a2
