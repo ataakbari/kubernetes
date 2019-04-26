@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: gpu-container
-    image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:latest #9108e5a2
+    image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:9108e5a2
     args: ["sleep", "infinity"]
     resources:
       limits:
