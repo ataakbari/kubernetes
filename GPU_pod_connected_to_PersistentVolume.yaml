@@ -11,9 +11,9 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 1
-        memory: "8Gi"
+        memory: "10Gi"
       requests:
-        memory: "8Gi"
+        memory: "10Gi"
     volumeMounts:
       - mountPath: /batman-vol
         name: batman-vol
