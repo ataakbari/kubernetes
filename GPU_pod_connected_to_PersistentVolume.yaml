@@ -22,6 +22,10 @@ spec:
     - name: batman-vol
       persistentVolumeClaim:
         claimName: batman-vol
+  runAsUser:
+    rule: RunAsAny
+  fsGroup:
+    rule: RunAsAny
 
 
 # gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:bc47da8c
