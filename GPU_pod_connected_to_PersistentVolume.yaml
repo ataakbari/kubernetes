@@ -24,8 +24,6 @@ spec:
     - name: batman-vol
       persistentVolumeClaim:
         claimName: batman-vol
-  securityContext:
-    fsGroup: 100
 
 
 # gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:bc47da8c
