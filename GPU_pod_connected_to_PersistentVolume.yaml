@@ -4,6 +4,8 @@ metadata:
   name: batman-gpu
   namespace: chrs
 spec:
+  securityContext:
+    fsGroup: 100
   containers:
   - name: gpu-container
     image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:latest # bc47da8c
