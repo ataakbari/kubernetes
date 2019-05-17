@@ -5,7 +5,7 @@ metadata:
   namespace: chrs
 spec:
   securityContext:
-    fsGroup: 501
+    fsGroup: 342
   containers:
   - name: gpu-container
     image: gitlab-registry.nautilus.optiputer.net/prp/jupyterlab:latest # bc47da8c
